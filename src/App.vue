@@ -1,23 +1,43 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/common/Navbar.vue';
+import Hero from './components/sections/Hero.vue';
+import ProductLink from './components/sections/ProductLink.vue';
+import ProductPromo from './components/sections/ProductPromo.vue';
+import StorePromo from './components/sections/StorePromo.vue';
+import Footer from './components/common/Footer.vue'
+
+
+
 </script>
 
 <template>
-  
-  <HelloWorld msg="Hello!" />
+
+  <div class="">
+    <Navbar/>
+    <Hero />
+
+    <section class="container mx-auto">
+
+      <ProductLink />
+
+      <ProductPromo/>
+
+      <StorePromo/>
+      
+    </section>
+
+    <Footer/>
+  </div>
+
+
+
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style scoped lang="scss">
+#hero-section{
+  background-color: #131313;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.footer{
+  background-color: #131313;
 }
 </style>
